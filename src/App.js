@@ -52,7 +52,7 @@ return (
 const ChatRoom = () =>{
   const messagesRef = firestore.collection('messages');
   
-  const query = messagesRef.orderBy('createdAt').limit(25);
+  const query = messagesRef.orderBy('createdAt').limit(2500);
   const [messages] = useCollectionData(query, {idField: 'id'});
   console.log(messages);
   const [formValue, setFormValue] = useState('');
