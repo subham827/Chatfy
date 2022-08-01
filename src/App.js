@@ -69,6 +69,14 @@ const ChatRoom = () =>{
     setFormValue('');
     dummy.current.scrollIntoView({behavior: 'smooth'});
   }
+   const playMusic = () => {
+    const audio = new Audio('/Ting Sound Effect.mp3');
+    audio.play();
+
+  }
+  useEffect(()=>{
+    playMusic();
+  },[messages])
 return (
   <>
   <SignOut></SignOut>
